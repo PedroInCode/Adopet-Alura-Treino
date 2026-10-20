@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://localhost:7062/tutor
+method: POST
+order: 1000

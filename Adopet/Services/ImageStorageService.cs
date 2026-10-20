@@ -11,6 +11,11 @@ public class ImageStorageService
 
     public string Upload(IFormFile imagem)
     {
+        if (!Directory.Exists(_uploadFolder))
+        {
+            Directory.CreateDirectory(_uploadFolder);
+        }
+
         string novoNome = GerarNovoNome(imagem.FileName);
 
         string caminhoCompletoDoArquivo = Path.Combine(_uploadFolder, novoNome);

@@ -1,0 +1,33 @@
+$kind: http-request
+url: https://localhost:7062/pet
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: imagem
+      src:
+        - postman-cloud:///1f1ccd1f-3781-4380-a4da-61299bc7ce07
+      description: ""
+      disabled: false
+    - type: text
+      key: nome
+      value: Sol
+      description: ""
+      disabled: false
+    - type: text
+      key: idade
+      value: "5"
+      description: ""
+      disabled: false
+    - type: text
+      key: tipo
+      value: GATO
+      description: ""
+      disabled: false
+    - type: text
+      key: porte
+      value: MEDIO
+      description: ""
+      disabled: false
+order: 1000

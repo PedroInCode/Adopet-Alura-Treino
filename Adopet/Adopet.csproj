@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="storage\**" />
+    <Content Remove="storage\**" />
+    <EmbeddedResource Remove="storage\**" />
+    <None Remove="storage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.5" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
@@ -18,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="storage\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://localhost:7062/adocao
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"idPet\" : 10,\r
+
+    \    \"idTutor\" : 1,\r
+
+    \    \"motivo\" : \"Um motivo qualquer\"\r
+
+    }"
+order: 2000

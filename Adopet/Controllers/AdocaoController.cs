@@ -33,9 +33,16 @@ public class AdocaoController : ControllerBase
     [HttpPost]
     public IActionResult Solicitar([FromBody] SolicitacaoDeAdocaoDto dados)
     {
-
-        _acaoService.Solicitar(dados);
-        return Ok("Adoção solicitada com sucesso!");
+        try
+        {
+            _acaoService.Solicitar(dados);
+            return Ok("Adoção solicitada com sucesso!");
+        }
+        catch (Exception ex)
+        {
+            return NotFound("Falha ao encontrar objeto solicitado!");
+        }
+        
     }
 
     [HttpPut("aprovar")]

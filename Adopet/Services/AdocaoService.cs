@@ -53,14 +53,8 @@ public class AdocaoService
         //{
         //    throw new TutorComLimiteAtingidoException("Tutor não pode mais adotar!");
         //}
-        try
-        {
-            _adocaoRepository.Add(new Adocao(null, pet, dto.Motivo));           
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Falha ao solicitar adoção! - {ex.Message}");
-        }
+
+        _adocaoRepository.Add(new Adocao(null, pet, dto.Motivo));           
     }
 
     public void Aprovar(AprovarAdocaoDto dto)
