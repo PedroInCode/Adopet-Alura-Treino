@@ -38,11 +38,15 @@ public class AdocaoController : ControllerBase
             _acaoService.Solicitar(dados);
             return Ok("Adoção solicitada com sucesso!");
         }
-        catch (Exception ex)
+        catch (NullReferenceException ex)
         {
             return NotFound($"Falha ao encontrar objeto solicitado! - {ex.Message}");
         }
-        
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Falha ao encontrar objeto solicitado! - {ex.Message}");
+        }
+
     }
 
     [HttpPut("aprovar")]
