@@ -1,4 +1,13 @@
 $kind: http-request
 url: https://localhost:7062/tutor
-method: GET
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nome\" : \"Juju\",\r
+
+    \    \"email\" : \"juju@gmail.com\"\r
+
+    }"
 order: 2000

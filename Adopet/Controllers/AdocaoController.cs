@@ -40,7 +40,7 @@ public class AdocaoController : ControllerBase
         }
         catch (Exception ex)
         {
-            return NotFound("Falha ao encontrar objeto solicitado!");
+            return NotFound($"Falha ao encontrar objeto solicitado! - {ex.Message}");
         }
         
     }
