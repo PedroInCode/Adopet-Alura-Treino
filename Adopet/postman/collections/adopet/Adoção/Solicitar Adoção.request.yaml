@@ -5,7 +5,7 @@ body:
   type: json
   content: "{\r
 
-    \    \"idPet\" : 7,\r
+    \    \"idPet\" : 1,\r
 
     \    \"idTutor\" : 1,\r
 
